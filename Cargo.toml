@@ -1,0 +1,16 @@
+[package]
+name = "loony-rs-runtime"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+crossbeam = "0.8.4"
+futures = { version = "0.3.31", features = ["thread-pool"] }
+mio = "1.1.1"
+parking_lot = "0.12.5"
+pin-project-lite = "0.2.16"
+slab = "0.4.11"
+tracing = "0.1.43"
+
+[dev-dependencies]
+futures = { version = "0.3.31", features = ["executor"] }
