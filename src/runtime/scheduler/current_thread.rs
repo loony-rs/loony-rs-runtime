@@ -119,7 +119,7 @@ impl CurrentThread {
 
         if self.is_idle() && !self.shutdown.load(Ordering::Acquire) {
             if let Some(duration) = duration {
-                self.parker.park_timeout(duration);
+                self.parker.park_timeout(Some(duration));
             } else {
                 self.parker.park();
             }
